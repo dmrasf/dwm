@@ -74,11 +74,11 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "st", NULL };
 
-static const char *mutevol[] = { "/home/dmr/scripts/vol-mute.sh" };
-static const char *upvol[] = { "/home/dmr/scripts/vol-up.sh" };
-static const char *downvol[] = { "/home/dmr/scripts/vol-down.sh" };
-static const char *upbl[] = { "/home/dmr/scripts/bl-up.sh" };
-static const char *downbl[] = { "/home/dmr/scripts/bl-down.sh" };
+static const char *mutevol[] = { "/home/dmr/scripts/vol-mute.sh", NULL };
+static const char *upvol[] = { "/home/dmr/scripts/vol-up.sh", NULL };
+static const char *downvol[] = { "/home/dmr/scripts/vol-down.sh", NULL };
+static const char *upbl[] = { "/home/dmr/scripts/bl-up.sh", NULL };
+static const char *downbl[] = { "/home/dmr/scripts/bl-down.sh", NULL };
 
 
 static Key keys[] = {
