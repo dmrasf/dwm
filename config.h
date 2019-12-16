@@ -1,5 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
+#include <X11/XF86keysym.h>
+
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
@@ -86,8 +88,8 @@ static Key keys[] = {
     { 0,              XF86XK_AudioRaiseVolume, spawn,          {.v = upvol } },
     { 0,              XF86XK_AudioMute,        spawn,          {.v = mutevol } },
     { 0,              XF86XK_AudioLowerVolume, spawn,          {.v = downvol } },
-    { 0,              XF86XK_Back,             spawn           {.v = upbl} },
-    { 0,              XF86XK_Forward,          spawn           {.v = downbl} },
+    { 0,              XF86XK_MonBrightnessUp,  spawn,          {.v = upbl} },
+    { 0,              XF86XK_MonBrightnessDown,spawn,          {.v = downbl} },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
