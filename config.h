@@ -81,8 +81,8 @@ static const char *upvol[]    = { "/home/dmr/scripts/vol-up.sh", NULL };
 static const char *downvol[]  = { "/home/dmr/scripts/vol-down.sh", NULL };
 static const char *upbl[]     = { "/home/dmr/scripts/bl-up.sh", NULL };
 static const char *downbl[]   = { "/home/dmr/scripts/bl-down.sh", NULL };
-//static const char *premus[]   = { "/home/dmr/scripts/music_pre.sh", NULL };
-//static const char *nextmus[]  = { "/home/dmr/scripts/music_next.sh", NULL };
+static const char *premus[]   = { "/home/dmr/scripts/music_pre.sh", NULL };
+static const char *nextmus[]  = { "/home/dmr/scripts/music_next.sh", NULL };
 static const char *pausemus[] = { "/home/dmr/scripts/music_pause.sh", NULL };
 
 
@@ -98,6 +98,8 @@ static Key keys[] = {
     { 0,              XF86XK_MonBrightnessUp,  spawn,          {.v = upbl} },
     { 0,              XF86XK_MonBrightnessDown,spawn,          {.v = downbl} },
     { Mod1Mask|ControlMask,         XK_p,      spawn,          {.v = pausemus} },
+    { Mod1Mask|ControlMask,         XK_m,      spawn,          {.v = nextmus} },
+    { Mod1Mask|ControlMask,         XK_n,      spawn,          {.v = premus} },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_i,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
