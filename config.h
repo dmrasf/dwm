@@ -76,6 +76,8 @@ static const char *termcmd[]  = { "alacritty", NULL };
 
 /* my commands */
 static const char *chromium[] = { "chromium", NULL };
+static const char *fs[]       = { "flameshot gui", NULL };
+static const char *fsf[]      = { "flameshot full -p ~/Pictures/Captures/", NULL };
 static const char *mutevol[]  = { "/home/dmr/scripts/vol-mute.sh", NULL };
 static const char *upvol[]    = { "/home/dmr/scripts/vol-up.sh", NULL };
 static const char *downvol[]  = { "/home/dmr/scripts/vol-down.sh", NULL };
@@ -92,6 +94,8 @@ static Key keys[] = {
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_c,      spawn,          {.v = chromium } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
+    { MODKEY,                       XK_g,      spawn,          {.v = fs} },
+    { MODKEY|ShiftMask,             XK_g,      spawn,          {.v = fsf} },
     { 0,              XF86XK_AudioRaiseVolume, spawn,          {.v = upvol } },
     { 0,              XF86XK_AudioMute,        spawn,          {.v = mutevol } },
     { 0,              XF86XK_AudioLowerVolume, spawn,          {.v = downvol } },
