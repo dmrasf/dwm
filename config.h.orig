@@ -106,6 +106,8 @@ static Key keys[] = {
     { Mod1Mask|ControlMask,         XK_m,      spawn,          {.v = nextmus} },
     { Mod1Mask|ControlMask,         XK_n,      spawn,          {.v = premus} },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
+	{ MODKEY|ShiftMask,             XK_i,      rotatestack,    {.i = +1 } },
+	{ MODKEY|ShiftMask,             XK_k,      rotatestack,    {.i = -1 } },
 	{ MODKEY,                       XK_i,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
 	{ MODKEY,                       XK_r,      incnmaster,     {.i = +1 } },
