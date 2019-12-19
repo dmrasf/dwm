@@ -95,10 +95,10 @@ static const char *pausemus[] = { "/home/dmr/scripts/music_pause.sh", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
-	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
+	{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_c,      spawn,          {.v = chromium } },
-	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
-	{ MODKEY,                       XK_grave,  togglescratch,  {.v = scratchpadcmd } },
+	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
+	{ MODKEY|ShiftMask,             XK_Return, togglescratch,  {.v = scratchpadcmd } },
     { MODKEY,                       XK_g,      spawn,          {.v = fs} },
     { MODKEY|ShiftMask,             XK_g,      spawn,          {.v = fsf} },
     { 0,              XF86XK_AudioRaiseVolume, spawn,          {.v = upvol } },
@@ -154,7 +154,7 @@ static Key keys[] = {
 	TAGKEYS(                        XK_3,                      2)
 	TAGKEYS(                        XK_4,                      3)
 	TAGKEYS(                        XK_5,                      4)
-	TAGKEYS(                        XK_6,                      5)
+	TAGKEYS(                        XK_6,                     5)
 	TAGKEYS(                        XK_7,                      6)
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
