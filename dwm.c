@@ -1588,7 +1588,6 @@ run(void)
 
 void
 runAutostart(void) {
-	system("cd ~/scripts; ./autostart_blocking.sh");
 	system("cd ~/scripts; ./autostart.sh &");
 }
 
