@@ -73,14 +73,13 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
-static const char *termcmd[]  = { "alacritty", NULL };
+static const char *termcmd[]  = { "st", NULL };
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34", NULL };
 
 /* my commands */
 static const char *chromium[] = { "chromium", NULL };
-static const char *fs[]       = { "flameshot", "gui", NULL };
-//static const char *fsf[]      = { "flameshot", "full", "-p", "~/Pictures/Captures/", NULL };
+static const char *fs[]       = { "/home/dmr/scripts/cap-gui.sh", NULL };
 static const char *fsf[]      = { "/home/dmr/scripts/cap.sh", NULL };
 static const char *mutevol[]  = { "/home/dmr/scripts/vol-mute.sh", NULL };
 static const char *upvol[]    = { "/home/dmr/scripts/vol-up.sh", NULL };
@@ -90,7 +89,6 @@ static const char *downbl[]   = { "/home/dmr/scripts/bl-down.sh", NULL };
 static const char *premus[]   = { "/home/dmr/scripts/music_pre.sh", NULL };
 static const char *nextmus[]  = { "/home/dmr/scripts/music_next.sh", NULL };
 static const char *pausemus[] = { "/home/dmr/scripts/music_pause.sh", NULL };
-
 
 
 static Key keys[] = {
