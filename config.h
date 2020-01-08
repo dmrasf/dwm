@@ -1,4 +1,4 @@
-/* See LICENSE file for copyright and license details. */
+ /* See LICENSE file for copyright and license details. */
 
 #include <X11/XF86keysym.h>
 
@@ -14,7 +14,7 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 0;        /* 0 means bottom bar */
 static const Bool viewontag         = True;     /* Switch view on tag switch */
 static const char *fonts[]          = { "Source Code Pro:size=14" };
-static const char dmenufont[]       = "Source Code Pro:size=14";
+static const char dmenufont[]       = "Source Code Pro:size=15";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
@@ -79,16 +79,16 @@ static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34
 
 /* my commands */
 static const char *chromium[] = { "chromium", NULL };
-static const char *fs[]       = { "/home/dmr/scripts/cap-gui.sh", NULL };
-static const char *fsf[]      = { "/home/dmr/scripts/cap.sh", NULL };
-static const char *mutevol[]  = { "/home/dmr/scripts/vol-mute.sh", NULL };
-static const char *upvol[]    = { "/home/dmr/scripts/vol-up.sh", NULL };
-static const char *downvol[]  = { "/home/dmr/scripts/vol-down.sh", NULL };
-static const char *upbl[]     = { "/home/dmr/scripts/bl-up.sh", NULL };
-static const char *downbl[]   = { "/home/dmr/scripts/bl-down.sh", NULL };
-static const char *premus[]   = { "/home/dmr/scripts/music_pre.sh", NULL };
-static const char *nextmus[]  = { "/home/dmr/scripts/music_next.sh", NULL };
-static const char *pausemus[] = { "/home/dmr/scripts/music_pause.sh", NULL };
+static const char *fs[]       = { "./scripts/cap-gui.sh", NULL };
+static const char *fsf[]      = { "./scripts/cap.sh", NULL };
+static const char *mutevol[]  = { "./scripts/vol-mute.sh", NULL };
+static const char *upvol[]    = { "./scripts/vol-up.sh", NULL };
+static const char *downvol[]  = { "./scripts/vol-down.sh", NULL };
+static const char *upbl[]     = { "./scripts/bl-up.sh", NULL };
+static const char *downbl[]   = { "./scripts/bl-down.sh", NULL };
+static const char *premus[]   = { "./scripts/music_pre.sh", NULL };
+static const char *nextmus[]  = { "./scripts/music_next.sh", NULL };
+static const char *pausemus[] = { "./scripts/music_pause.sh", NULL };
 
 
 static Key keys[] = {
@@ -116,22 +116,22 @@ static Key keys[] = {
 	{ MODKEY,                       XK_e,      incnmaster,     {.i = -1 } },
 	{ MODKEY,                       XK_j,      setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
-	{ MODKEY|Mod1Mask,              XK_h,      incrgaps,       {.i = +1 } },
-	{ MODKEY|Mod1Mask,              XK_l,      incrgaps,       {.i = -1 } },
-	{ MODKEY|Mod1Mask|ShiftMask,    XK_h,      incrogaps,      {.i = +1 } },
-	{ MODKEY|Mod1Mask|ShiftMask,    XK_l,      incrogaps,      {.i = -1 } },
-	{ MODKEY|Mod1Mask|ControlMask,  XK_h,      incrigaps,      {.i = +1 } },
-	{ MODKEY|Mod1Mask|ControlMask,  XK_l,      incrigaps,      {.i = -1 } },
+	{ MODKEY|Mod1Mask,              XK_j,      incrgaps,       {.i = +2 } },
+	{ MODKEY|Mod1Mask,              XK_l,      incrgaps,       {.i = -2 } },
+	{ MODKEY|Mod1Mask|ShiftMask,    XK_j,      incrogaps,      {.i = +2 } },
+	{ MODKEY|Mod1Mask|ShiftMask,    XK_l,      incrogaps,      {.i = -2 } },
+	{ MODKEY|Mod1Mask|ControlMask,  XK_j,      incrigaps,      {.i = +2 } },
+	{ MODKEY|Mod1Mask|ControlMask,  XK_l,      incrigaps,      {.i = -2 } },
 	{ MODKEY|Mod1Mask,              XK_0,      togglegaps,     {0} },
 	{ MODKEY|Mod1Mask|ShiftMask,    XK_0,      defaultgaps,    {0} },
-	{ MODKEY,                       XK_y,      incrihgaps,     {.i = +1 } },
-	{ MODKEY,                       XK_o,      incrihgaps,     {.i = -1 } },
-	{ MODKEY|ControlMask,           XK_y,      incrivgaps,     {.i = +1 } },
-	{ MODKEY|ControlMask,           XK_o,      incrivgaps,     {.i = -1 } },
-	{ MODKEY|Mod1Mask,              XK_y,      incrohgaps,     {.i = +1 } },
-	{ MODKEY|Mod1Mask,              XK_o,      incrohgaps,     {.i = -1 } },
-	{ MODKEY|ShiftMask,             XK_y,      incrovgaps,     {.i = +1 } },
-	{ MODKEY|ShiftMask,             XK_o,      incrovgaps,     {.i = -1 } },
+	{ MODKEY,                       XK_y,      incrihgaps,     {.i = +4 } },
+	{ MODKEY,                       XK_o,      incrihgaps,     {.i = -4 } },
+	{ MODKEY|ControlMask,           XK_y,      incrivgaps,     {.i = +4 } },
+	{ MODKEY|ControlMask,           XK_o,      incrivgaps,     {.i = -4 } },
+	{ MODKEY|Mod1Mask,              XK_y,      incrohgaps,     {.i = +4 } },
+	{ MODKEY|Mod1Mask,              XK_o,      incrohgaps,     {.i = -4 } },
+	{ MODKEY|ShiftMask,             XK_y,      incrovgaps,     {.i = +4 } },
+	{ MODKEY|ShiftMask,             XK_o,      incrovgaps,     {.i = -4 } },
 	{ MODKEY,                       XK_Return, zoom,           {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
 	{ MODKEY,                       XK_q,      killclient,     {0} },
@@ -156,7 +156,7 @@ static Key keys[] = {
 	TAGKEYS(                        XK_7,                      6)
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
-	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+	{ MODKEY|ShiftMask|ControlMask, XK_q,      quit,           {0} },
 };
 
 /* button definitions */

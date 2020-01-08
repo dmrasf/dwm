@@ -4,3 +4,5 @@ dwm
 *.rej
 *.o
 .ccls-cache/
+script/backupdir=~/
+script/directory=~/
