@@ -79,16 +79,16 @@ static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34
 
 /* my commands */
 static const char *chromium[] = { "chromium", NULL };
-static const char *fs[]       = { "./scripts/cap-gui.sh", NULL };
-static const char *fsf[]      = { "./scripts/cap.sh", NULL };
-static const char *mutevol[]  = { "./scripts/vol-mute.sh", NULL };
-static const char *upvol[]    = { "./scripts/vol-up.sh", NULL };
-static const char *downvol[]  = { "./scripts/vol-down.sh", NULL };
-static const char *upbl[]     = { "./scripts/bl-up.sh", NULL };
-static const char *downbl[]   = { "./scripts/bl-down.sh", NULL };
-static const char *premus[]   = { "./scripts/music_pre.sh", NULL };
-static const char *nextmus[]  = { "./scripts/music_next.sh", NULL };
-static const char *pausemus[] = { "./scripts/music_pause.sh", NULL };
+static const char *fs[]       = { "/home/dmr/Proc/dwm/scripts/cap-gui.sh", NULL };
+static const char *fsf[]      = { "/home/dmr/Proc/dwm/scripts/cap.sh", NULL };
+static const char *mutevol[]  = { "/home/dmr/Proc/dwm/scripts/vol-mute.sh", NULL };
+static const char *upvol[]    = { "/home/dmr/Proc/dwm/scripts/vol-up.sh", NULL };
+static const char *downvol[]  = { "/home/dmr/Proc/dwm/scripts/vol-down.sh", NULL };
+static const char *upbl[]     = { "/home/dmr/Proc/dwm/scripts/bl-up.sh", NULL };
+static const char *downbl[]   = { "/home/dmr/Proc/dwm/scripts/bl-down.sh", NULL };
+static const char *premus[]   = { "/home/dmr/Proc/dwm/scripts/music_pre.sh", NULL };
+static const char *nextmus[]  = { "/home/dmr/Proc/dwm/scripts/music_next.sh", NULL };
+static const char *pausemus[] = { "/home/dmr/Proc/dwm/scripts/music_pause.sh", NULL };
 
 
 static Key keys[] = {
