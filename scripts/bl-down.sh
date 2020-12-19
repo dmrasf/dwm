@@ -1,1 +1,0 @@
-xbacklight -dec 5
