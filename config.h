@@ -86,20 +86,27 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "st", NULL };
 static const char scratchpadname[] = "scratchpad";
-static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34", NULL };
+static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "105x23", NULL };
 
 #include <X11/XF86keysym.h>
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
-	{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
+	//{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
+    { MODKEY,                       XK_d,      spawn,          SHCMD("rofi -show") },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY|ShiftMask,             XK_Return, togglescratch,  {.v = scratchpadcmd } },
     { MODKEY,                       XK_c,      spawn,          SHCMD("chromium") },
-    { MODKEY,                       XK_m,      spawn,          SHCMD("netease-cloud-music") },
+    { MODKEY,                       XK_m,      spawn,          SHCMD("spotify") },
     { MODKEY,                       XK_n,      spawn,          SHCMD(" feh --randomize --bg-fill $HOME/.wallpapers/*") },
     { MODKEY,                       XK_g,      spawn,          SHCMD("flameshot gui") },
     { MODKEY|ShiftMask,             XK_g,      spawn,          SHCMD("flameshot full -p ~/Pictures/Captures") },
+    { MODKEY,                       XK_p,      spawn,          SHCMD("playerctl -p spotify play-pause")},
+    { MODKEY,             XK_bracketleft,      spawn,          SHCMD("playerctl -p spotify previous")},
+    { MODKEY,            XK_bracketright,      spawn,          SHCMD("playerctl -p spotify next")},
+    { Mod1Mask,                     XK_p,      spawn,          SHCMD("mpc toggle")},
+    { Mod1Mask,           XK_bracketleft,      spawn,          SHCMD("mpc prev")},
+    { Mod1Mask,          XK_bracketright,      spawn,          SHCMD("mpc next")},
 	{ MODKEY|Mod1Mask,              XK_u,      incrgaps,       {.i = +1 } },
 	{ MODKEY|Mod1Mask|ShiftMask,    XK_u,      incrgaps,       {.i = -1 } },
 	{ MODKEY|Mod1Mask,              XK_i,      incrigaps,      {.i = +1 } },
@@ -160,7 +167,7 @@ static Key keys[] = {
 static Button buttons[] = {
 	/* click                event mask      button          function        argument */
 	{ ClkLtSymbol,          0,              Button1,        setlayout,      {0} },
-	{ ClkLtSymbol,          0,              Button3,        setlayout,      {.v = &layouts[2]} },
+	{ ClkLtSymbol,          0,              Button3,        setlayout,      {.v = &layouts[13]} },
 	{ ClkWinTitle,          0,              Button2,        zoom,           {0} },
 	{ ClkStatusText,        0,              Button1,        sigdwmblocks,   {.i = 1} },
 	{ ClkStatusText,        0,              Button2,        sigdwmblocks,   {.i = 2} },
